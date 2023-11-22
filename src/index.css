@@ -3,7 +3,7 @@ html {
 }
 
 html {
-  background: #4B69FD;
+  background: #7D31FA;
   border: 2px solid black;
   font-family: 'Poppins', sans-serif;
 }
@@ -24,7 +24,7 @@ h2 {
   font-weight: 600;
   font-size: 32px;
   margin-bottom: 36px;
-  color: #4B69FD;
+  color: #7D31FA;
 }
 
 ul li {
@@ -32,3 +32,4 @@ ul li {
   font-weight: 300;
   margin: 8px 0;
 }
+
