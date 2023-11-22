@@ -1,18 +1,18 @@
 import { render, screen } from '@testing-library/react'
 import React from 'react'
 import { RecoilRoot } from 'recoil'
-import { useListDeParticipants } from '../state/hook/useListDeParticipants'
+import { useListOfParticipants } from '../state/hook/useListOfParticipants'
 import ListParticipants from './ListParticipants'
 
-jest.mock('../state/hook/useListDeParticipants', () => {
+jest.mock('../state/hook/useListOfParticipants', () => {
     return {
-        useListDeParticipants: jest.fn()
+        useListOfParticipants: jest.fn()
     }
 });
 
 describe('an empty list of participants', () => {
     beforeEach(() => {
-        (useListDeParticipants as jest.Mock).mockReturnValue([])
+        (useListOfParticipants as jest.Mock).mockReturnValue([])
     });
     test('deve ser renderizada sem elementos', () => {
         render(<RecoilRoot>
@@ -27,7 +27,7 @@ describe('an empty list of participants', () => {
 describe('a completed list of participants', () => {
     const participants = ['Ana', 'Catarina']
     beforeEach(() => {
-        (useListDeParticipants as jest.Mock).mockReturnValue(participants)
+        (useListOfParticipants as jest.Mock).mockReturnValue(participants)
     })
     test('must be rendered without elements', () => {
         render(<RecoilRoot>

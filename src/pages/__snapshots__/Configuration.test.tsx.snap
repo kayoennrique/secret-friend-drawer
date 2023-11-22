@@ -1,27 +1,47 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`the configuration page must be rendered correctly 1`] = `
+exports[`the page Configuration must be rendered correctly 1`] = `
 <div>
-  <form>
-    <input
-      placeholder="Insira os nomes dos participantes"
-      type="text"
-      value=""
-    />
-    <button
-      disabled=""
-    >
-      Adicionar
-    </button>
-    
-  </form>
-  <ul />
-  <footer>
-    <button
-      disabled=""
-    >
-      Iniciar Brincadeira!
-    </button>
-  </footer>
+  <div
+    class="card"
+  >
+    <section>
+      <h2>
+        Vamos começar!
+      </h2>
+      <form>
+        <div
+          class="group-input-btn"
+        >
+          <input
+            placeholder="Insira os nomes dos participantes"
+            type="text"
+            value=""
+          />
+          <button
+            disabled=""
+          >
+            Adicionar
+          </button>
+        </div>
+        
+      </form>
+      <ul />
+      <footer
+        class="footer-settings"
+      >
+        <button
+          class="button"
+          disabled=""
+        >
+          Iniciar brincadeira
+        </button>
+        <img
+          alt="Sacolas de compras"
+          src="/images/bags.png"
+        />
+      </footer>
+    </section>
+  </div>
 </div>
 `;

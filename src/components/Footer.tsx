@@ -1,11 +1,14 @@
 import { useNavigate } from "react-router-dom";
-import { useListDeParticipants } from "../state/hook/useListDeParticipants";
+import { useListOfParticipants } from "../state/hook/useListOfParticipants";
 import './Footer.css';
+import { useSorter } from "../state/hook/useSorter";
 
 const Footer = () => {
-    const participants = useListDeParticipants();
+    const participants = useListOfParticipants();
     const navigateTo = useNavigate();
+    const draw = useSorter();
     const started = () => {
+        draw();
         navigateTo('/sorteio');
     }
     return (

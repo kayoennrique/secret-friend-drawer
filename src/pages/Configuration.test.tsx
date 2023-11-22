@@ -3,21 +3,20 @@ import React from "react";
 import { RecoilRoot } from "recoil";
 import Configuration from "./Configuration";
 
-const mockNavigation = jest.fn();
+const mockNavigation = jest.fn()
 
 jest.mock('react-router-dom', () => {
-    return{
+    return {
         useNavigate: () => mockNavigation
     }
-});
+})
 
-describe('the configuration page', () => {
+describe('the page Configuration', () => {
     test('must be rendered correctly', () => {
-        const { container } = render(
-            <RecoilRoot>
-                <Configuration />
-            </RecoilRoot>
-        );
+        const { container } = render(<RecoilRoot>
+            <Configuration />
+        </RecoilRoot>)
+
         expect(container).toMatchSnapshot()
-    });
-});
+    })
+})
