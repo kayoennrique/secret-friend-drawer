@@ -38,7 +38,7 @@ describe('on the page Sortition', () => {
         </RecoilRoot>)
 
         const options = screen.queryAllByRole('option')
-        expect(options).toHaveLength(participants.length)
+        expect(options).toHaveLength(participants.length + 1)
     });
     test('Secret Santa is displayed when requested', () => {
         render(<RecoilRoot>

@@ -33,6 +33,7 @@ const Sortition = () => {
                     value={participantOfTheTime}
                     onChange={e => setParticipantOfTheTime(e.target.value)}
                 >
+                    <option>Selecione seu nome</option>
                     {participants.map(participant => <option key={participant}>{participant}</option>)}
                 </select>
                 <p>Clique em sortear para ver quem é seu amigo oculto!</p>
