@@ -4,8 +4,8 @@ import { RecoilRoot } from "recoil";
 import Form from "./Form";
 
 
-describe('o comportamento do Form.tsx', () => {
-    test('quando o input está vazio, novos participantes não podem ser adicionados', () => {
+describe('the behavior of Form.tsx', () => {
+    test('when the input is empty, new participants cannot be added', () => {
         render(
             <RecoilRoot>
                 <Form />
@@ -16,7 +16,7 @@ describe('o comportamento do Form.tsx', () => {
         expect(button).toBeDisabled();
     });
 
-    test('adicionar um participante caso exista um nome preenchido', () => {
+    test('add a participant if a name is filled in', () => {
         render(
             <RecoilRoot>
                 <Form />
@@ -33,7 +33,7 @@ describe('o comportamento do Form.tsx', () => {
         expect(input).toHaveValue("");
     });
     
-    test('nomes duplicados não podem ser adicionados na lista', () => {
+    test('Duplicate names cannot be added to the list', () => {
         render(
             <RecoilRoot>
                 <Form />
@@ -56,9 +56,9 @@ describe('o comportamento do Form.tsx', () => {
         const errorMessage = screen.getByRole('alert');
     
         expect(errorMessage.textContent).toBe('Nomes duplicados não são permitidos!');
-    })
+    });
     
-    test('a mensagem de erro deve sumir após os timers', () => {
+    test('the error message should disappear after the timers', () => {
         jest.useFakeTimers();
         render(
             <RecoilRoot>
@@ -70,13 +70,13 @@ describe('o comportamento do Form.tsx', () => {
             target: {
                 value: 'Ana Catarina'
             }
-        })
+        });
         fireEvent.click(button);
         fireEvent.change(input, {
             target: {
                 value: 'Ana Catarina'
             }
-        })
+        });
         fireEvent.click(button);
         let errorMessage = screen.queryByRole('alert');
         expect(errorMessage).toBeInTheDocument();

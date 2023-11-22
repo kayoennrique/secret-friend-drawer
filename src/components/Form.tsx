@@ -29,7 +29,7 @@ const Form = () => {
         />
         <button disabled={!name}>Adicionar</button>
         {errorMessage && <p role="alert">{errorMessage}</p>}
-    </form>)
+    </form>);
 }
 
 export default Form;
