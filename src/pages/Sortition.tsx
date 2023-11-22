@@ -18,6 +18,10 @@ const Sortition = () => {
         e.preventDefault()
         if (result.has(participantOfTheTime)) {
             setSecretFriend(result.get(participantOfTheTime)!)
+            setTimeout(() => {
+                setSecretFriend('')
+            }, 5000)
+
         }
     }
 
