@@ -27,7 +27,7 @@ const Form = () => {
                 value={name}
                 onChange={e => setName(e.target.value)}
                 type="text"
-                placeholder="Insira os nomes dos participantes"
+                placeholder="Insira os nomes"
             />
             <button disabled={!name}>Adicionar</button>
         </div>

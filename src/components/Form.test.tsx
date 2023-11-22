@@ -10,7 +10,7 @@ describe('the behavior of Form.tsx', () => {
             <RecoilRoot>
                 <Form />
             </RecoilRoot>);
-        const input = screen.getByPlaceholderText('Insira os nomes dos participantes');
+        const input = screen.getByPlaceholderText('Insira os nomes');
         const button = screen.getByRole('button');
         expect(input).toBeInTheDocument();
         expect(button).toBeDisabled();
@@ -21,7 +21,7 @@ describe('the behavior of Form.tsx', () => {
             <RecoilRoot>
                 <Form />
             </RecoilRoot>);
-        const input = screen.getByPlaceholderText('Insira os nomes dos participantes');
+        const input = screen.getByPlaceholderText('Insira os nomes');
         const button = screen.getByRole('button');
         fireEvent.change(input, {
             target: {
@@ -38,7 +38,7 @@ describe('the behavior of Form.tsx', () => {
             <RecoilRoot>
                 <Form />
             </RecoilRoot>);
-        const input = screen.getByPlaceholderText('Insira os nomes dos participantes');
+        const input = screen.getByPlaceholderText('Insira os nomes');
         const button = screen.getByRole('button');
         fireEvent.change(input, {
             target: {
@@ -64,7 +64,7 @@ describe('the behavior of Form.tsx', () => {
             <RecoilRoot>
                 <Form />
             </RecoilRoot>);
-        const input = screen.getByPlaceholderText('Insira os nomes dos participantes');
+        const input = screen.getByPlaceholderText('Insira os nomes');
         const button = screen.getByRole('button');
         fireEvent.change(input, {
             target: {
