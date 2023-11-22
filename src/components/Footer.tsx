@@ -1,20 +1,21 @@
 import { useNavigate } from "react-router-dom";
 import { useListDeParticipants } from "../state/hook/useListDeParticipants";
+import './Footer.css';
 
 const Footer = () => {
     const participants = useListDeParticipants();
     const navigateTo = useNavigate();
     const started = () => {
-        navigateTo('/sorteio')
+        navigateTo('/sorteio');
     }
     return (
-        <footer>
+        <footer className="footer-settings">
             <button
+                className="button"
                 disabled={participants.length < 3}
                 onClick={started}
-            >
-                Iniciar Brincadeira!
-            </button>
+            >Iniciar brincadeira</button>
+            <img src="/images/bags.png" alt="Sacolas de compras" />
         </footer>
     );
 }

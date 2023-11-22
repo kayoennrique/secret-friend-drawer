@@ -1,13 +1,12 @@
 import React from "react";
-import styles from './Card.module.scss';
+import './styles.css';
 
-interface ICard{
-    children: React.ReactNode
-}
-export default function Card({ children }: ICard) {
+const Card: React.FC = ({ children }) => {
     return (
-        <div className={styles.card}>
+        <div className="card">
             {children}
         </div>
     )
 }
+
+export default Card;
